@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Annual Leave Configurations -->
+        <record id="sgeede_annual_leave_config_1" model="sgeede.leave.config">
+            <field name="years_count">1</field>
+            <field name="service_type">year</field>
+            <field name="added_value">7</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_2" model="sgeede.leave.config">
+            <field name="years_count">2</field>
+            <field name="service_type">year</field>
+            <field name="added_value">8</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_3" model="sgeede.leave.config">
+            <field name="years_count">3</field>
+            <field name="service_type">year</field>
+            <field name="added_value">9</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_4" model="sgeede.leave.config">
+            <field name="years_count">4</field>
+            <field name="service_type">year</field>
+            <field name="added_value">10</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_5" model="sgeede.leave.config">
+            <field name="years_count">5</field>
+            <field name="service_type">year</field>
+            <field name="added_value">11</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_6" model="sgeede.leave.config">
+            <field name="years_count">6</field>
+            <field name="service_type">year</field>
+            <field name="added_value">12</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_7" model="sgeede.leave.config">
+            <field name="years_count">7</field>
+            <field name="service_type">year</field>
+            <field name="added_value">13</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <record id="sgeede_annual_leave_config_8" model="sgeede.leave.config">
+            <field name="years_count">8</field>
+            <field name="service_type">year</field>
+            <field name="added_value">14</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_annual"/>
+        </record>
+
+        <!-- Sick leave Configuration -->
+        <record id="sgeede_sick_leave_config_1" model="sgeede.leave.config">
+            <field name="months_count">3</field>
+            <field name="service_type">month</field>
+            <field name="added_value">5</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_sick"/>
+        </record>
+
+        <record id="sgeede_sick_leave_config_2" model="sgeede.leave.config">
+            <field name="months_count">4</field>
+            <field name="service_type">month</field>
+            <field name="added_value">8</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_sick"/>
+        </record>
+
+        <record id="sgeede_sick_leave_config_3" model="sgeede.leave.config">
+            <field name="months_count">5</field>
+            <field name="service_type">month</field>
+            <field name="added_value">11</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_sick"/>
+        </record>
+
+        <record id="sgeede_sick_leave_config_4" model="sgeede.leave.config">
+            <field name="months_count">6</field>
+            <field name="service_type">month</field>
+            <field name="added_value">14</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_sick"/>
+        </record>
+
+         <!-- Hospitalisation leave Configuration -->
+        <record id="sgeede_hospitalisation_leave_config_1" model="sgeede.leave.config">
+            <field name="months_count">3</field>
+            <field name="service_type">month</field>
+            <field name="added_value">15</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_hospitalisation"/>
+        </record>
+
+        <record id="sgeede_hospitalisation_leave_config_2" model="sgeede.leave.config">
+            <field name="months_count">4</field>
+            <field name="service_type">month</field>
+            <field name="added_value">30</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_hospitalisation"/>
+        </record>
+
+        <record id="sgeede_hospitalisation_leave_config_3" model="sgeede.leave.config">
+            <field name="months_count">5</field>
+            <field name="service_type">month</field>
+            <field name="added_value">45</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_hospitalisation"/>
+        </record>
+
+        <record id="sgeede_hospitalisation_leave_config_4" model="sgeede.leave.config">
+            <field name="months_count">6</field>
+            <field name="service_type">month</field>
+            <field name="added_value">60</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_hospitalisation"/>
+        </record>
+
+        <!-- Maternity Leave Configuration -->
+        <record id="sgeede_maternity_leave_config_1" model="sgeede.leave.config">
+            <field name="sg_citizen_type">yes</field>
+            <field name="added_value">112</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_maternity"/>
+        </record>
+
+        <record id="sgeede_maternity_leave_config_2" model="sgeede.leave.config">
+            <field name="sg_citizen_type">no</field>
+            <field name="added_value">84</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_maternity"/>
+        </record>
+
+        <!-- Paternity Leave Configuration -->
+        <record id="sgeede_paternity_leave_config_1" model="sgeede.leave.config">
+            <field name="sg_citizen_type">yes</field>
+            <field name="added_value">98</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_paternity"/>
+        </record>
+
+        <record id="sgeede_paternity_leave_config_2" model="sgeede.leave.config">
+            <field name="sg_citizen_type">no</field>
+            <field name="added_value">0</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_paternity"/>
+        </record>
+
+        <!-- Adoption Leave Configuration -->
+        <record id="sgeede_adoption_leave_config_1" model="sgeede.leave.config">
+            <field name="sg_citizen_type">yes</field>
+            <field name="added_value">84</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_adoption"/>
+        </record>
+
+        <record id="sgeede_adoption_leave_config_2" model="sgeede.leave.config">
+            <field name="sg_citizen_type">no</field>
+            <field name="added_value">0</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_adoption"/>
+        </record>
+
+        <!-- Childcare Leave Configuration -->
+        <record id="sgeede_childcare_leave_config_1" model="sgeede.leave.config">
+            <field name="sg_citizen_type">yes</field>
+            <field name="added_value">6</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_childcare"/>
+        </record>
+
+        <record id="sgeede_childcare_leave_config_2" model="sgeede.leave.config">
+            <field name="sg_citizen_type">no</field>
+            <field name="added_value">2</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_childcare"/>
+        </record>
+
+        <!-- Extended Childcare Leave Configuration -->
+        <record id="sgeede_extended_childcare_leave_config_1" model="sgeede.leave.config">
+            <field name="sg_citizen_type">yes</field>
+            <field name="added_value">2</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_extended_childcare"/>
+        </record>
+
+        <record id="sgeede_extended_childcare_leave_config_2" model="sgeede.leave.config">
+            <field name="sg_citizen_type">no</field>
+            <field name="added_value">0</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_extended_childcare"/>
+        </record>
+
+         <!-- Infant Care Leave Configuration -->
+        <record id="sgeede_infantcare_leave_config_1" model="sgeede.leave.config">
+            <field name="sg_citizen_type">yes</field>
+            <field name="added_value">12</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_share_infant_care"/>
+        </record>
+
+        <record id="sgeede_infantcare_leave_config_2" model="sgeede.leave.config">
+            <field name="sg_citizen_type">no</field>
+            <field name="added_value">0</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_share_infant_care"/>
+        </record>
+
+         <!-- No Pay Leave Configuration -->
+        <record id="sgeede_no_pay_leave_config" model="sgeede.leave.config">
+            <field name="added_value">14</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_no_pay"/>
+        </record>
+
+         <!-- Marriage Leave Configuration -->
+        <record id="sgeede_marriage_leave_config" model="sgeede.leave.config">
+            <field name="added_value">3</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_marriage"/>
+        </record>
+
+         <!-- Compassionate Leave Configuration -->
+        <record id="sgeede_compassionate_leave_config" model="sgeede.leave.config">
+            <field name="added_value">3</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_compassionate"/>
+        </record>
+
+         <!-- National Service Leave Configuration -->
+        <record id="sgeede_national_service_leave_config" model="sgeede.leave.config">
+            <field name="added_value">730</field>
+            <field name="leave_type_id" ref="sgeede_base.sgeede_leave_type_national_service"/>
+        </record>
+
+        
+    </data>
+</odoo>

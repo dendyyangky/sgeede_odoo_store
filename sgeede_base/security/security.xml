@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+
+    <record id="sgeede_payment_distribution_groups" model="res.groups">
+        <field name="name">Manage Payment Distribution</field>
+    </record>
+
+    <record id="sgeede_singaporean_leave_groups" model="res.groups">
+        <field name="name">Manage Singaporean Leave</field>
+    </record>
+    
+</data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_accrual_sick_plan" model="hr.leave.accrual.plan">
+            <field name="name">Sick Leave Plan</field>
+            <field name="accrued_gain_time">start</field>
+            <field name="can_be_carryover">True</field>
+            <field name="carryover_date">allocation</field>
+            <field name="transition_mode">end_of_accrual</field>
+        </record>
+
+        <record id="hr_accrual_sick_plan_3_month" model="hr.leave.type">
+            <field name="name">Parental Leaves</field>
+            <field name="requires_allocation">yes</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="responsible_ids" eval="[(4, ref('base.user_admin'))]"/>
+            <field name="icon_id" ref="hr_holidays.icon_17"/>
+        </record>
+    </data>
+</odoo>

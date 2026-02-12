@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sgeede_leave_type_annual" model="hr.leave.type">
+            <field name="name">Annual Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">annual</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_sick" model="hr.leave.type">
+            <field name="name">Sick Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">sick</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_sick_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_hospitalisation" model="hr.leave.type">
+            <field name="name">Hospitalisation Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">hospitalisation</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_sick_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_maternity" model="hr.leave.type">
+            <field name="name">Maternity Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">maternity</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_paternity" model="hr.leave.type">
+            <field name="name">Paternity Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">paternity</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="max_count">12</field>
+            <field name="max_type">month</field>
+            <field name="min_type">month</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_share_parental" model="hr.leave.type">
+            <field name="name">Shared Parental Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_unpaid_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_adoption" model="hr.leave.type">
+            <field name="name">Adoption Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">adoption_childcare</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="min_count">0</field>
+            <field name="min_type">day</field>
+            <field name="max_count">12</field>
+            <field name="max_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_childcare" model="hr.leave.type">
+            <field name="name">Childcare Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">childcare</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="min_count">0</field>
+            <field name="min_type">day</field>
+            <field name="max_count">7</field>
+            <field name="max_type">year</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_extended_childcare" model="hr.leave.type">
+            <field name="name">Extended Childcare Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">extended_childcare</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="min_count">7</field>
+            <field name="min_type">year</field>
+            <field name="max_count">12</field>
+            <field name="max_type">year</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_share_infant_care" model="hr.leave.type">
+            <field name="name">Unpaid Infant Care Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">infant_care</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="min_count">0</field>
+            <field name="min_type">day</field>
+            <field name="max_count">2</field>
+            <field name="max_type">year</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_unpaid_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_no_pay" model="hr.leave.type">
+            <field name="name">No Pay Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">no_pay</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_unpaid_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_marriage" model="hr.leave.type">
+            <field name="name">Marriage Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">marriage</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_compassionate" model="hr.leave.type">
+            <field name="name">Compassionate Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">compassionate</field>
+            <field name="allocation_min">3</field>
+            <field name="allocation_type">month</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_legal_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="sgeede_leave_type_national_service" model="hr.leave.type">
+            <field name="name">National Service Leave</field>
+            <field name="requires_allocation">True</field>
+            <field name="employee_requests">False</field>
+            <field name="include_public_holidays_in_duration">False</field>
+            <field name="leave_validation_type">both</field>
+            <field name="leave_type">national_service</field>
+            <field name="request_unit">half_day</field>
+            <field name="allocation_validation_type">hr</field>
+            <field name="work_entry_type_id" ref="hr_work_entry.work_entry_type_unpaid_leave"/>
+            <field name="color">2</field>
+            <field name="company_id" eval="False"/>
+            <field name="country_id" eval="False"/>
+            <field name="sequence">1</field>
+        </record>
+    </data>
+</odoo>

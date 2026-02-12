@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="rule_leave_type_hr_user" model="ir.rule">
+        <field name="name">Leave Type - Singaporean Leave</field>
+        <field name="model_id" ref="hr_holidays.model_hr_leave_type"/>
+        <field name="groups" eval="[(4, ref('sgeede_base.sgeede_singaporean_leave_groups'))]"/>
+        <field name="domain_force">
+            [('leave_type', 'in', [
+                'annual',
+                'sick',
+                'hospitalisation',
+                'maternity',
+                'paternity',
+                'childcare',
+                'extended_childcare',
+                'infant_care',
+                'adoption_childcare'
+            ])]
+        </field>
+    </record>
+
+    <record id="rule_leave_type_non_sg_user" model="ir.rule">
+        <field name="name">Leave Type - Non-Singaporean Leave</field>
+        <field name="model_id" ref="hr_holidays.model_hr_leave_type"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">
+            [('leave_type', 'not in', [
+                'annual',
+                'sick',
+                'hospitalisation',
+                'maternity',
+                'paternity',
+                'childcare',
+                'extended_childcare',
+                'infant_care',
+                'adoption_childcare'
+            ])]
+        </field>
+    </record>
+
+</odoo>

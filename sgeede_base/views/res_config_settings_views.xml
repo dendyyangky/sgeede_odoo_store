@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sgeede_res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">sgeede.res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="SGEEDE" string="SGEEDE" name="sgeede" logo="/sgeede_base/static/img/SGEEDE.png">
+                    <block title="Accounting" name="sgeede_accounting_setting_container" groups="account.group_account_manager">
+                        <setting id="payment_distribution" help="Multiple Invoice or Bills or Refunds Payment Distribution">
+                            <field name="is_module_sgeede_payment_distribution"/>
+                        </setting>
+                    </block>
+
+                    <block title="Time Off" name="sgeede_timeoff_setting_container" groups="account.group_account_manager">
+                        <setting id="singaporean_leave" help="Singaporean Leave Types in Time Off">
+                            <field name="is_module_sgeede_singapore_leave"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

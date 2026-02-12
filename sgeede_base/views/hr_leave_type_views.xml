@@ -1,0 +1,42 @@
+<odoo>
+    <record id="sgeede_edit_holiday_status_form_inherit" model="ir.ui.view">
+        <field name="name">sgeede.hr.leave.type.form.inherit</field>
+        <field name="model">hr.leave.type</field>
+        <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_unit']" position="before">
+                <field name="leave_type" widget="radio" groups="sgeede_base.sgeede_singaporean_leave_groups"/>
+                <label for="allocation_min" groups="sgeede_base.sgeede_singaporean_leave_groups">Minimum Allocation</label>
+                <div class="oe_inline" style="display:flex; align-items:center;" groups="sgeede_base.sgeede_singaporean_leave_groups">
+                    <field name="allocation_min" nolabel="1" style="width:6ch; margin-right:8px;"/>
+                    <field class="w-25" name="allocation_type" nolabel="1"/>
+                </div>
+                <label invisible="leave_type not in ('childcare', 'extended_childcare', 'adoption_childcare', 'infant_care')" for="min_count" groups="sgeede_base.sgeede_singaporean_leave_groups">Min Age</label>
+                <div groups="sgeede_base.sgeede_singaporean_leave_groups" invisible="leave_type not in ('childcare', 'extended_childcare', 'adoption_childcare', 'infant_care')" class="oe_inline" style="display:flex; align-items:center;">
+                    <field name="min_count" nolabel="1" style="width:6ch; margin-right:8px;"/>
+                    <field class="w-25" name="min_type" nolabel="1"/>
+                </div>
+                <label groups="sgeede_base.sgeede_singaporean_leave_groups" invisible="leave_type not in ('childcare', 'extended_childcare', 'adoption_childcare', 'infant_care', 'paternity')" for="max_count">Max Age</label>
+                <div invisible="leave_type not in ('childcare', 'extended_childcare', 'adoption_childcare', 'infant_care', 'paternity')" class="oe_inline" style="display:flex; align-items:center;">
+                    <field name="max_count" nolabel="1" style="width:6ch; margin-right:8px;"/>
+                    <field class="w-25" name="max_type" nolabel="1"/>
+                </div>
+            </xpath>
+            <xpath expr="//group[@name='visual']" position="before">
+                <group groups="sgeede_base.sgeede_singaporean_leave_groups">
+                    <field name="leave_config_ids" readonly="not id" nolabel="1" context="{'default_leave_type_id': id}">
+                        <list editable="bottom">
+                            <field name="years_count" column_invisible="parent.leave_type != 'annual'"/>
+                            <field name="months_count" column_invisible="parent.leave_type not in ('sick', 'hospitalisation')"/>
+                            <field name="sg_citizen_type" width="30%" column_invisible="parent.leave_type not in ('maternity', 'paternity', 'childcare', 'extended_childcare', 'adoption_childcare', 'infant_care')"/>
+                            <field name="added_value" width="30%"/>
+                        </list>
+                    </field>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='leave_type']" position="after">
+                <field name="eligible_from_date" invisible="leave_type != 'paternity'" groups="sgeede_base.sgeede_singaporean_leave_groups"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sgeede_payment_distribution_tree" model="ir.ui.view">
+            <field name="name">sgeede.payment.distribution.list</field>
+            <field name="model">sgeede.payment.distribution</field>
+            <field name="arch" type="xml">
+                <list string="Payment Distribution">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="payment_date"/>
+                    <field name="journal_id"/>
+                    <field name="invoice_type"/>
+                    <field name="payment_amount"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="sgeede_payment_distribution_form" model="ir.ui.view">
+            <field name="name">sgeede.payment.distribution.form</field>
+            <field name="model">sgeede.payment.distribution</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Payment Distribution">
+                <header>                    
+                    <button name="make_payment_distribution" type="object" class="oe_highlight" string="Pay" invisible="payment_feature_type == 'advance' or state != 'draft'"/>
+                    <button name="make_payment_advance" type="object" class="oe_highlight" string="Pay" invisible="payment_feature_type == 'default' or state != 'draft'"/>
+                    <button class="oe_highlight" name="action_cancel" string="Cancel" type="object" invisible="state != 'done'" />
+                    <button class="oe_highlight" name="action_draft" string="Set To Draft" type="object" invisible="state != 'cancel'" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+                    <div name="button_box" class="oe_button_box">
+                        <button class="oe_stat_button" type="object"
+                                name="action_open_payment" icon="fa-dollar" invisible="payment_id == False">
+                                <div class="o_stat_info">
+                                    <span class="o_stat_text">Payment</span>
+                                </div>
+                        </button>
+                        <field name="move_knockoff_id" invisible="1" />
+                        <button name="button_open_knockoff"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-bars"
+                                groups="account.group_account_user,account.group_account_readonly" invisible="not move_knockoff_id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Knockoff Journal</span>
+                            </div>
+                        </button>
+
+                        <field name="move_writeoff_id" invisible="1" />
+                        <button name="button_open_writeoff"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-bars"
+                                groups="account.group_account_user,account.group_account_readonly" invisible="not move_writeoff_id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Writeoff Journal</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="payment_feature_type" widget="radio" options="{'horizontal': True}" readonly="state == 'done'" required="1"/>
+                            <field name="partner_id" readonly="state == 'done'"/>
+                            <field name="payment_date" readonly="state == 'done'"/>
+                            <field name="reference" readonly="state == 'done'"/>
+                            <field name="payment_amount" readonly="state == 'done'"/>
+                        </group>
+                        <group>
+                            <field name="payment_type" widget="radio" options="{'horizontal': True}" invisible="payment_feature_type == 'default'" required="payment_feature_type == 'advance'"/>
+                            <field name="invoice_type" invisible="payment_feature_type == 'advance'" readonly="state == 'done'"/>
+                            <field name="move_type" invisible="1" force_save="1"/>
+                            <field name="journal_id" readonly="state == 'done'"/>
+                            <field name="sum_total_invoice" invisible="payment_feature_type == 'default' or payment_type == 'outbound'" readonly="1" force_save="1" />
+                            <field name="sum_total_knockoff_bill" invisible="payment_feature_type == 'default' or payment_type == 'outbound'" readonly="1" force_save="1"/>
+                            <field name="sum_total_credit_note" invisible="payment_feature_type == 'default' or payment_type == 'outbound'" readonly="1" force_save="1"/>
+                            <field name="sum_total_bill" invisible="payment_feature_type == 'default' or payment_type == 'inbound'" readonly="1" force_save="1"/>
+                            <field name="sum_total_knockoff_invoice" invisible="payment_feature_type == 'default' or payment_type == 'inbound'" readonly="1" force_save="1"/>
+                            <field name="sum_total_refund" invisible="payment_feature_type == 'default' or payment_type == 'inbound'" readonly="1" force_save="1"/>
+                            <field name="amount_writeoff" invisible="payment_feature_type == 'default'" readonly="1" force_save="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lines" invisible="payment_feature_type == 'advance'">
+                            <field name="distribution_line_ids" readonly="state == 'done'">
+                                <list editable="bottom">
+                                    <field name="invoice_id" domain="[('partner_id', '=', parent.partner_id), ('move_type', '=', parent.move_type), ('state', '=', 'posted'), ('amount_residual', '>=', 1)]"/>
+                                    <field name="invoice_date" force_save="1"/>
+                                    <field name="invoice_total" force_save="1"/>
+                                    <field name="currency_id" force_save="1"/>
+                                    <field name="payment_amount"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Invoice Lines" invisible="payment_feature_type == 'default' or payment_feature_type == 'default'">
+                            <field name="select_move_ids" invisible="payment_feature_type == 'default' or payment_type == 'outbound'" domain="[('move_type','=','out_invoice'),('partner_id','=',partner_id),
+                            ('payment_state','in',('not_paid','partial')),('state','=','posted')]" readonly="state != 'draft'" />
+                            <field name="select_move_bill_ids" invisible="payment_feature_type == 'default' or payment_type == 'inbound'" domain="[('move_type','=','in_invoice'),('partner_id','=',partner_id),
+                            ('payment_state','in',('not_paid','partial')),('state','=','posted')]" readonly="state != 'draft'" />
+                        </page>
+                        <page string="Credit Note Lines" invisible="payment_feature_type == 'default' or payment_type == 'outbound'">
+                            <field name="select_credit_note_ids" domain="[('move_type','=','out_refund'),('partner_id','=',partner_id),
+                            ('payment_state','in',('not_paid','partial')),('state','=','posted')]" readonly="state != 'draft'" />
+                        </page>
+                        <page string="Refund Lines" invisible="payment_feature_type == 'default' or payment_type == 'inbound'">
+                            <field name="select_refund_ids" domain="[('move_type','=','in_refund'),('partner_id','=',partner_id),
+                            ('payment_state','in',('not_paid','partial')),('state','=','posted')]" readonly="state != 'draft'" />
+                        </page>
+                        <page string="Knockoff Lines" invisible="payment_feature_type == 'default' or payment_feature_type == 'default'">
+                            <field name="select_move_knockoff_invoice_ids" invisible="payment_feature_type == 'default' or payment_type == 'inbound'" domain="[('move_type','=','out_invoice'),('partner_id','=',partner_id),
+                            ('payment_state','in',('not_paid','partial')),('state','=','posted')]" readonly="state != 'draft'" />
+                            <field name="select_move_knockoff_bill_ids" invisible="payment_feature_type == 'default' or payment_type == 'outbound'" domain="[('move_type','=','in_invoice'),('partner_id','=',partner_id),
+                            ('payment_state','in',('not_paid','partial')),('state','=','posted')]" readonly="state != 'draft'" />
+                        </page>
+                        <page string="Writeoff Lines" invisible="payment_feature_type == 'default'">
+                            <field name="account_writeoff_ids" nolabel="1" readonly="state != 'draft'">
+                                <list editable="top">
+                                    <field name="name"/>
+                                    <field name="account_id"/>
+                                    <field name="amount"/>
+                                    <field name="company_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- <record id="view_sgeede_payment_distribution_filter" model="ir.ui.view">
+            <field name="name">sgeede.payment.distribution.filter</field>
+            <field name="model">sgeede.payment.distribution</field>
+            <field name="arch" type="xml">
+                <search string="Search Payment">
+                    <field name="name" string="Payment"
+                           filter_domain="[
+                                '|', '|' ,
+                                ('name', 'ilike', self), ('reference', 'ilike', self),
+                                ('partner_id', 'child_of', self)]"/>
+                    <field name="name"/>
+                    <field name="reference"/>
+                    <field name="journal_id"/>
+                    <field name="partner_id" operator="child_of"/>
+                    <separator/>
+                    <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+                    <filter name="done" string="Posted" domain="[('state', '=', 'done')]"/>
+                    <filter name="cancel" string="Cancelled" domain="[('state', '=', 'cancel')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
+                        <filter name="status" string="Status" context="{'group_by':'state'}"/>
+                        <filter name="invoice_type" string="Invoice Type" context="{'group_by':'invoice_type'}"/>
+                        <filter name="payment_type" string="Payment Type" context="{'group_by':'payment_type'}"/>
+                        <filter name="payment_feature" string="Payment Feature" context="{'group_by':'payment_feature_type'}"/>
+                        <filter string="Journal" name="groupy_by_journal" domain="[]" context="{'group_by': 'journal_id'}"/>
+                        <separator/>
+                        <filter string="Payment Date" name="payment_date" context="{'group_by': 'payment_date'}"/>
+                    </group>
+               </search>
+            </field>
+        </record> -->
+
+
+        <record id="action_sgeede_payment_distribution" model="ir.actions.act_window">
+            <field name="name">Payment Distribution</field>
+            <field name="res_model">sgeede.payment.distribution</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Payment Distribution.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_sgeede_payment_distribution"
+                name="Payment Distribution"
+                action="action_sgeede_payment_distribution"
+                parent="account.menu_finance_entries"
+                groups="sgeede_base.sgeede_payment_distribution_groups"
+                sequence="15"/>
+    </data>
+</odoo>
