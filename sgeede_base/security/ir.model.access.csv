@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sgeede_leave_config,sgeede.leave.config,model_sgeede_leave_config,,1,1,1,1
-access_sgeede_employee_children,sgeede.employee.children,model_sgeede_employee_children,,1,1,1,1
-access_sgeede_payment_distribution,access.sgeede.payment.distribution,model_sgeede_payment_distribution,,1,1,1,1
-access_sgeede_payment_distribution_line,access.sgeede.payment.distribution.line,model_sgeede_payment_distribution_line,,1,1,1,1
-access_sgeede_writeoff_payment_wizard,access.sgeede.writeoff.payment.wizard,model_sgeede_writeoff_payment_wizard,,1,1,1,1
-access_sgeede_payment_writeoff,sgeede.payment.writeoff,model_sgeede_payment_writeoff,,1,1,1,1
