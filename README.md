@@ -1,0 +1,1 @@
+# sgeede_odoo_store
