@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section style="background-color: #002AA4; padding: 60px 0 80px; position: relative; overflow: hidden;">
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+
+    <!-- Logos -->
+    <div style="display: flex; align-items: center; margin-bottom: 60px;">
+      <img src="SGEEDE.png" alt="SGEEDE Logo" style="width: 255px; height: 70px;"/>
+      <img src="Odoo.png" alt="Odoo Logo" style="width: 141px; height: 141px; margin-left: 30px;">
+    </div>
+
+    <!-- Content Row -->
+    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+
+      <!-- Left -->
+      <div style="flex: 0 0 40%; max-width: 40%;">
+        <h1 style="font-size: 28px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
+          Sales &amp; Purchase Note Template
+        </h1>
+        <h2 style="font-size: 17px; font-weight: 600; color: #a0b4ff; margin-bottom: 16px;">
+          Streamline Your Business Operations
+        </h2>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 340px;">
+          Adds reusable note templates to Sales Orders and Purchase Orders.
+          Create and manage a library of predefined note templates for Terms &amp; Conditions.
+          Select a template directly from the Sales Order or Purchase Order form.
+          Notes are automatically populated and can still be edited freely after selection.
+          Templates can be scoped to Sales only, Purchase only, or both.
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div style="flex: 0 0 55%; max-width: 55%; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 28px 24px;">
+        <div style="background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; display: inline-block;"></span>
+          Easy Integration
+        </div>
+        <div style="background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; display: inline-block;"></span>
+          Customizable Workflows
+        </div>
+        <div style="background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; display: inline-block;"></span>
+          Support Included
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MODULE INFO ══════════ -->
+<div style="border: 1px solid #e8eaf0; border-radius: 12px; background: #fff; overflow: hidden;">
+
+  <h2 style="font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 6px; margin-top:40px">Module Information</h2>
+    <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 36px;">
+      Explore our comprehensive module details, visuals, frequently asked questions, and latest updates.
+    </p>
+
+  <div style="display: flex; justify-content: center; gap: 4px; padding: 12px; border-bottom: 1px solid #e8eaf0; background: #fff;">
+    <a data-bs-toggle="collapse" href="#panel-features"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #fff; cursor: pointer; border-radius: 6px; background: #1a2ecc; text-decoration: none;">
+      ⚡ Features
+    </a>
+    <a data-bs-toggle="collapse" href="#panel-screenshot"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #121212; cursor: pointer; border-radius: 6px; border: 1px solid #e8eaf0; text-decoration: none;">
+      🖼 Screenshot
+    </a>
+    <a data-bs-toggle="collapse" href="#panel-faq"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #121212; cursor: pointer; border-radius: 6px; border: 1px solid #e8eaf0; text-decoration: none;">
+      ❓ FAQ
+    </a>
+    <a data-bs-toggle="collapse" href="#panel-releases"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #121212; cursor: pointer; border-radius: 6px; border: 1px solid #e8eaf0; text-decoration: none;">
+      📋 Releases
+    </a>
+  </div>
+
+  <div style="padding: 32px;">
+
+    <!-- Features (open by default) -->
+    <div class="collapse show" id="panel-features">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+          <div style="font-size: 22px; margin-bottom: 10px;">📋</div>
+          <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Note Template Configuration</h4>
+          <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">Manage a library of reusable note templates from a dedicated configuration table. Set the template name, content, and where it applies.</p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+          <div style="font-size: 22px; margin-bottom: 10px;">🎯</div>
+          <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Apply To Scope</h4>
+          <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">Each template can be scoped to Sales only, Purchase only, or both — giving you full control over where each note appears.</p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+          <div style="font-size: 22px; margin-bottom: 10px;">⚙️</div>
+          <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Accessible from Configuration Menu</h4>
+          <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">Templates are managed under <strong>Sales &gt; Configuration</strong> or <strong>Purchase &gt; Configuration</strong> — no extra setup required.</p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+          <div style="font-size: 22px; margin-bottom: 10px;">🔽</div>
+          <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Select Template Field</h4>
+          <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">A dedicated <em>Select Template</em> field is added directly on the Sales Order and Purchase Order form for quick template selection.</p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+          <div style="font-size: 22px; margin-bottom: 10px;">✍️</div>
+          <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Auto-fill Terms &amp; Conditions</h4>
+          <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">Selecting a template automatically populates the Terms &amp; Conditions field. The note can still be freely edited after insertion.</p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+          <div style="font-size: 22px; margin-bottom: 10px;">🔒</div>
+          <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Smart Domain Filtering</h4>
+          <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">The template dropdown is automatically filtered by context — Sales orders only show Sales templates, Purchase orders only show Purchase templates.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Screenshot (collapsed by default) -->
+    <div class="collapse" id="panel-screenshot">
+      <div style="display: flex; flex-direction: column; gap: 100px;">
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_1.png" style="width: 100%; aspect-ratio: 16/7"></div>
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_2.png" style="width: 100%; aspect-ratio: 16/7"></div>
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_3.png" style="width: 100%; aspect-ratio: 16/7"></div>
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_4.png" style="width: 100%; aspect-ratio: 16/7"></div>
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_5.png" style="width: 100%; aspect-ratio: 16/7"></div>
+      </div>
+    </div>
+
+    <!-- FAQ (collapsed by default) -->
+    <div class="collapse" id="panel-faq">
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Where do I find the Note Templates configuration?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">You can find it under <strong>Sales &gt; Configuration &gt; Note Templates</strong> or <strong>Purchase &gt; Configuration &gt; Note Templates</strong>. From there you can create, edit, and manage all your templates.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">How do I apply a template to a Sales or Purchase Order?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Open any Sales Order or Purchase Order and use the <strong>Select Template</strong> field. Once selected, the note content will automatically be inserted into the Terms &amp; Conditions field.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Can I edit the note after selecting a template?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Yes. The template only pre-fills the Terms &amp; Conditions field. You can freely edit the content after it has been inserted without affecting the original template.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Can I use the same template for both Sales and Purchase?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Yes. When creating a template, set the <strong>Apply To</strong> field to <strong>Both</strong> and it will be available in both Sales Orders and Purchase Orders.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Why don't I see certain templates in the dropdown?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">The <strong>Select Template</strong> field is domain-filtered by context. Sales Orders only show templates scoped to Sales, and Purchase Orders only show templates scoped to Purchase or Both.</p>
+      </div>
+
+    </div>
+
+    <!-- Releases (collapsed by default) -->
+    <div class="collapse" id="panel-releases">
+
+      <div style="background: #eef1ff; border-left: 3px solid #1a2ecc; padding: 22px 24px; border-radius: 10px; margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+          <div>
+            <div style="font-size: 14px; font-weight: 700;">Version 19.0.1.0.0</div>
+            <div style="font-size: 12px; color: #888; margin-top: 2px;">Initial Release — March 5, 2026</div>
+          </div>
+          <span style="font-size: 11px; font-weight: 600; color: #1a2ecc; background: #d6dcff; padding: 2px 10px; border-radius: 20px;">Latest</span>
+        </div>
+        <ul style="padding-left: 18px; margin: 0;">
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Initial commit</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Added Note Template configuration table with Apply To scope (Sales, Purchase, Both)</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Added Select Template field on Sales Order form</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Added Select Template field on Purchase Order form</li>
+          <li style="font-size: 13px; color: #444;">Auto-fill Terms &amp; Conditions on template selection with domain filtering by context</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section style="padding: 70px 0; background: #fff;">
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <h2 style="font-size: 26px; font-weight: 800; margin-bottom: 10px;">About Our Company</h2>
+    <p style="font-size: 14px; color: #555; max-width: 460px; line-height: 1.7; margin: 0;">We are a leading provider of custom Odoo solutions, specializing in developing innovative modules that solve real business challenges.</p>
+  </div>
+
+  <!-- ══════════ SERVICES ══════════ -->
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 36px; margin-top: 30px;">Our Services</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 0;">
+
+      <div style="flex: 0 0 50%; max-width: 50%;">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Custom Module Development</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">We build tailored Odoo modules to fit your exact business needs, from simple customizations to complex workflows.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Integration Services</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">We connect Odoo with your existing tools and third-party systems to keep your operations running smoothly in one place.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 50%; max-width: 50%;">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Odoo Implementation</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">We help you deploy and configure this module within your existing Odoo environment quickly and correctly.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Ongoing Support &amp; Maintenance</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Get continued assistance after purchase — bug fixes, updates, and guidance are always available when you need them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section style="background: #1a2ecc; padding: 70px 0; text-align: center; width: 100%;">
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <h2 style="font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 14px;">Ready to Transform Your Business?</h2>
+    <p style="font-size: 14px; color: #a0b4ff; max-width: 480px; margin: 0 auto 32px; line-height: 1.7;">Get started today and experience the difference our professional Odoo solutions can make. Our team is ready to help you succeed.</p>
+    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+      <a href="mailto:enquiry@sgeede.com" style="border: 2px solid #fff; color: #fff; background: transparent; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+        ✉ Email Us
+      </a>
+      <a href="https://sgeede.com" target="_blank" style="border: 2px solid #fff; color: #fff; background: transparent; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+        🌐 Website
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT BAR ══════════ -->
+<div style="background: #1a2ecc; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.12); text-align: center;">
+  <p style="font-size: 12px; color: rgba(255,255,255,0.55); margin-bottom: 4px;">Have Questions?</p>
+  <a href="https://wa.me/6281371197735" style="font-size: 14px; color: #fff; text-decoration: none; font-weight: 500;">💬 +62 813-7119-7735</a>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<div style="background: #111; padding: 18px 0; text-align: center;">
+  <p style="font-size: 12px; color: #666; margin: 0;">📍 2026 SGEEDE. All Rights Reserved</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</body>
+</html>
