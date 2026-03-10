@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- SALES TEMPLATES -->
+    <record id="note_template_sales_payment_terms" model="sgeede.note.template">
+        <field name="name">Payment Terms Reminder</field>
+        <field name="note">Payment is due within 30 days of invoice date. Please ensure timely payment to avoid late fees. For any payment-related queries, contact our finance department.</field>
+        <field name="apply_to">sale</field>
+    </record>
+
+    <record id="note_template_sales_delivery" model="sgeede.note.template">
+        <field name="name">Delivery Notice</field>
+        <field name="note">Estimated delivery is 5-7 business days from order confirmation. Delivery times may vary depending on location and product availability. You will be notified once the order is dispatched.</field>
+        <field name="apply_to">sale</field>
+    </record>
+
+    <record id="note_template_sales_warranty" model="sgeede.note.template">
+        <field name="name">Warranty &amp; Returns</field>
+        <field name="note">All products come with a 12-month warranty from the date of purchase. Returns are accepted within 14 days in original condition with proof of purchase. Contact us to initiate a return or warranty claim.</field>
+        <field name="apply_to">sale</field>
+    </record>
+
+    <record id="note_template_sales_thank_you" model="sgeede.note.template">
+        <field name="name">Thank You Note</field>
+        <field name="note">Thank you for your order! We appreciate your business and look forward to serving you again. If you have any questions or concerns, please do not hesitate to contact us.</field>
+        <field name="apply_to">sale</field>
+    </record>
+
+    <!-- PURCHASE TEMPLATES -->
+    <record id="note_template_purchase_quality" model="sgeede.note.template">
+        <field name="name">Quality Inspection Notice</field>
+        <field name="note">All received goods are subject to quality inspection upon arrival. Please ensure items match the specifications stated in the purchase order. Discrepancies must be reported within 3 business days of delivery.</field>
+        <field name="apply_to">purchase</field>
+    </record>
+
+    <record id="note_template_purchase_invoice" model="sgeede.note.template">
+        <field name="name">Invoice Submission Instructions</field>
+        <field name="note">Please submit your invoice referencing the Purchase Order number. Invoices without a valid PO number will not be processed. Payment will be made within the agreed credit terms upon receipt of a valid invoice.</field>
+        <field name="apply_to">purchase</field>
+    </record>
+
+    <record id="note_template_purchase_delivery_schedule" model="sgeede.note.template">
+        <field name="name">Delivery Schedule Confirmation</field>
+        <field name="note">Please confirm the delivery schedule at least 48 hours before dispatch. Deliveries must be made during business hours (Mon-Fri, 8AM-5PM). Contact our warehouse team to arrange an appointment.</field>
+        <field name="apply_to">purchase</field>
+    </record>
+
+    <!-- BOTH TEMPLATES -->
+    <record id="note_template_both_confidentiality" model="sgeede.note.template">
+        <field name="name">Confidentiality Notice</field>
+        <field name="note">This document and its contents are confidential and intended solely for the named recipient. Unauthorized disclosure, copying, or distribution is strictly prohibited. If received in error, please notify us immediately.</field>
+        <field name="apply_to">both</field>
+    </record>
+
+    <record id="note_template_both_terms" model="sgeede.note.template">
+        <field name="name">General Terms &amp; Conditions</field>
+        <field name="note">This transaction is subject to our standard terms and conditions. By proceeding, both parties agree to comply with the terms outlined in the signed agreement. A copy of our full terms is available upon request.</field>
+        <field name="apply_to">both</field>
+    </record>
+
+    <record id="note_template_both_contact" model="sgeede.note.template">
+        <field name="name">Contact Information</field>
+        <field name="note">For any inquiries regarding this document, please contact our team during business hours (Mon-Fri, 8AM-5PM). We aim to respond to all queries within 1 business day.</field>
+        <field name="apply_to">both</field>
+    </record>
+
+</odoo>
