@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sgeede_inherit_account_move_form" model="ir.ui.view">
+        <field name="name">sgeede.account.view.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="before">
+                <field name="note_ids" widget="sticky_notes_widget">
+                    <list>
+                        <field name="content"/>
+                        <field name="color"/>
+                        <field name="user_id"/>
+                        <field name="date"/>
+                        <field name="active"/>
+                    </list>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="sgeede_sticky_notes.StickyNotes">
+        <div class="o_sticky_notes_zone">
+            <div class="o_sticky_header" t-on-click="toggleCollapse">
+                <span class="o_sticky_label">Notes</span>
+                <span t-if="notes.length" class="o_sticky_count">
+                    <t t-esc="notes.length"/>
+                </span>
+                <span t-if="state.collapsed">▸</span>
+                <span t-else="">▾</span>
+            </div>
+        </div>
+
+        <div t-if="!state.collapsed" class="o_sticky_body">
+
+            <t t-foreach="notes" t-as="note" t-key="note.resId">
+                <div t-attf-class="o_sticky_card o_sticky_#{note.data.color}">
+                    <span class="o_sticky_close"
+                        t-on-click="() => this.archiveNote(note.resId)">×</span>
+                    <div class="o_sticky_content">
+                        <t t-esc="note.data.content"/>
+                    </div>
+                    <div class="o_sticky_meta">
+                        <t t-esc="this.getUserName(note.data.user_id)"/>
+                        <t t-if="note.data.date"> · <t t-esc="this.formatDate(note.data.date)"/></t>
+                    </div>
+                </div>
+            </t>
+
+            <div t-if="state.adding" class="o_sticky_add_form">
+                <textarea t-model="state.newContent" placeholder="Type your note..."/>
+                <div class="o_sticky_colors">
+                    <t t-foreach="['yellow','red','blue','green']" t-as="c" t-key="c">
+                    <span t-attf-class="o_color_dot o_color_#{c} #{state.newColor === c ? 'active' : ''}"
+                            t-on-click="() => state.newColor = c"/>
+                    </t>
+                </div>
+                <div class="o_sticky_actions">
+                    <button class="o_save" t-on-click="saveNote">Save</button>
+                    <button class="o_cancel" t-on-click="() => state.adding = false">Cancel</button>
+                </div>
+            </div>
+
+            <div t-if="!state.adding"
+                class="o_sticky_add_btn"
+                t-on-click="() => state.adding = true">
+            + Add note
+            </div>
+        </div>
+    </t>
+</templates>
