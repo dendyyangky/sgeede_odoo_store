@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section style="background-color: #002AA4; padding: 60px 0 80px; position: relative; overflow: hidden;">
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+
+    <!-- Logos -->
+    <div style="display: flex; align-items: center; margin-bottom: 60px;">
+      <img src="SGEEDE.png" alt="SGEEDE Logo" style="width: 255px; height: 70px;"/>
+      <img src="Odoo.png" alt="Odoo Logo" style="width: 141px; height: 141px; margin-left: 30px;">
+    </div>
+
+    <!-- Content Row -->
+    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+
+      <!-- Left -->
+      <div style="flex: 0 0 40%; max-width: 40%;">
+        <h1 style="font-size: 28px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
+          Sales &amp; Purchase Note Template
+        </h1>
+        <h2 style="font-size: 17px; font-weight: 600; color: #a0b4ff; margin-bottom: 16px;">
+          Streamline Your Business Operations
+        </h2>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 340px;">
+          Add sticky notes directly to Sales Orders, Purchase Orders, and Invoices.
+          Keep important information visible above the order lines instead of buried in the chatter.
+          Create, edit, and organize notes with color labels.
+          Each note records author and date automatically for clear tracking.
+          Notes remain fully editable and stay attached to the document for the entire workflow.
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div style="flex: 0 0 55%; max-width: 55%; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 28px 24px;">
+        <div style="background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; display: inline-block;"></span>
+          Easy Integration
+        </div>
+        <div style="background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; display: inline-block;"></span>
+          Customizable Workflows
+        </div>
+        <div style="background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; display: inline-block;"></span>
+          Support Included
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MODULE INFO ══════════ -->
+<div style="border: 1px solid #e8eaf0; border-radius: 12px; background: #fff; overflow: hidden;">
+
+  <h2 style="font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 6px; margin-top:40px">Module Information</h2>
+    <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 36px;">
+      Explore our comprehensive module details, visuals, frequently asked questions, and latest updates.
+    </p>
+
+  <div style="display: flex; justify-content: center; gap: 4px; padding: 12px; border-bottom: 1px solid #e8eaf0; background: #fff;">
+    <a data-bs-toggle="collapse" href="#panel-features"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #fff; cursor: pointer; border-radius: 6px; background: #1a2ecc; text-decoration: none;">
+      ⚡ Features
+    </a>
+    <a data-bs-toggle="collapse" href="#panel-screenshot"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #121212; cursor: pointer; border-radius: 6px; border: 1px solid #e8eaf0; text-decoration: none;">
+      🖼 Screenshot
+    </a>
+    <a data-bs-toggle="collapse" href="#panel-faq"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #121212; cursor: pointer; border-radius: 6px; border: 1px solid #e8eaf0; text-decoration: none;">
+      ❓ FAQ
+    </a>
+    <a data-bs-toggle="collapse" href="#panel-releases"
+       style="padding: 8px 18px; font-size: 14px; font-weight: 500; color: #121212; cursor: pointer; border-radius: 6px; border: 1px solid #e8eaf0; text-decoration: none;">
+      📋 Releases
+    </a>
+  </div>
+
+  <div style="padding: 32px;">
+
+    <!-- Features (open by default) -->
+    <div class="collapse show" id="panel-features">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+        <div style="width: 36px; height: 36px; background: #eef1ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <i class="fa fa-paint-brush" style="color: #4873D4; font-size: 16px;"></i>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Color-Coded Notes</h4>
+        <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">
+            Choose from 4 colors: yellow, red, blue, and green to visually categorize
+            your notes by urgency or type. Color is saved per note and always visible at a glance.
+        </p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+        <div style="width: 36px; height: 36px; background: #eef1ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <i class="fa fa-thumb-tack" style="color: #4873D4; font-size: 16px;"></i>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Always Above the Lines</h4>
+        <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">
+            Notes appear directly above the order lines, not buried at the bottom of the chatter.
+            The moment you open a record, your notes are the first thing you see.
+        </p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+        <div style="width: 36px; height: 36px; background: #eef1ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <i class="fa fa-compress" style="color: #4873D4; font-size: 16px;"></i>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Collapse and Expand</h4>
+        <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">
+            Toggle the entire notes zone open or closed with one click. A badge shows the
+            note count even when collapsed so you always know notes exist without
+            the zone taking up screen space.
+        </p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+        <div style="width: 36px; height: 36px; background: #eef1ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <i class="fa fa-user-o" style="color: #4873D4; font-size: 16px;"></i>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Author and Date Tracking</h4>
+        <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">
+            Every note automatically records who wrote it and when. Author name and creation
+            date are displayed on each card with no manual logging needed.
+        </p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+        <div style="width: 36px; height: 36px; background: #eef1ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <i class="fa fa-moon-o" style="color: #4873D4; font-size: 16px;"></i>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Dark Mode Support</h4>
+        <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">
+            Fully compatible with Odoo's built-in dark mode. All note colors, the notes zone,
+            and the add form adapt automatically with no extra configuration needed.
+        </p>
+        </div>
+
+        <div style="background: #fff; border: 1px solid #e8eaf0; border-radius: 12px; padding: 24px 20px;">
+        <div style="width: 36px; height: 36px; background: #eef1ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+            <i class="fa fa-cubes" style="color: #4873D4; font-size: 16px;"></i>
+        </div>
+        <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Sale, Purchase and Accounting</h4>
+        <p style="font-size: 12.5px; color: #666; line-height: 1.6; margin: 0;">
+            Works across all three core modules: Sale Orders, Purchase Orders, and
+            Accounting entries including Customer Invoices, Vendor Bills, and Credit Notes.
+            One install covers your entire workflow.
+        </p>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Screenshot (collapsed by default) -->
+    <div class="collapse" id="panel-screenshot">
+      <div style="display: flex; flex-direction: column; gap: 100px;">
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_1.png" style="width: 100%; aspect-ratio: 16/7"></div>
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_2.png" style="width: 100%; aspect-ratio: 16/7"></div>
+        <div style="width: 100%; aspect-ratio: 16/7; background: #e9ecf4; border-radius: 12px;"><img src="feature_3.png" style="width: 100%; aspect-ratio: 16/7"></div>
+      </div>
+    </div>
+
+    <!-- FAQ (collapsed by default) -->
+    <div class="collapse" id="panel-faq">
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Where do the Sticky Notes appear?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Sticky Notes are displayed directly above the order lines on Sales Orders, Purchase Orders, and Invoices, making them immediately visible when opening a record.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Who can see the notes?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Notes are visible to all users who have access to the document. Visibility follows standard Odoo access rights and permissions.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Are notes linked to the document permanently?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Yes. Each note is attached to its specific document and stays available throughout the entire workflow, from creation to completion.</p>
+      </div>
+
+      <div style="border: 1px solid #e8eaf0; border-radius: 10px; padding: 18px 22px; background: #fff; margin-bottom: 8px;">
+        <h5 style="font-size: 14px; font-weight: 600; margin-bottom: 6px;">Does it support dark mode?</h5>
+        <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Yes. The Sticky Notes interface automatically adapts to Odoo's dark mode, including colors and layout, with no extra setup required.</p>
+      </div>
+
+    </div>
+
+    <!-- Releases (collapsed by default) -->
+    <div class="collapse" id="panel-releases">
+
+      <div style="background: #eef1ff; border-left: 3px solid #1a2ecc; padding: 22px 24px; border-radius: 10px; margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+          <div>
+            <div style="font-size: 14px; font-weight: 700;">Version 18.0.1.0.0</div>
+            <div style="font-size: 12px; color: #888; margin-top: 2px;">Initial Release — March 31, 2026</div>
+          </div>
+          <span style="font-size: 11px; font-weight: 600; color: #1a2ecc; background: #d6dcff; padding: 2px 10px; border-radius: 20px;">Latest</span>
+        </div>
+        <ul style="padding-left: 18px; margin: 0;">
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Initial commit</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Added Custom Sticky Note Widget</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Added Sticky Note for Purchase, Sales and Invoice</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Color-coded notes (yellow, red, blue, green)</li>
+          <li style="font-size: 13px; color: #444; margin-bottom: 3px;">Collapse and expand notes zone with note counter</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section style="padding: 70px 0; background: #fff;">
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <h2 style="font-size: 26px; font-weight: 800; margin-bottom: 10px;">About Our Company</h2>
+    <p style="font-size: 14px; color: #555; max-width: 460px; line-height: 1.7; margin: 0;">We are a leading provider of custom Odoo solutions, specializing in developing innovative modules that solve real business challenges.</p>
+  </div>
+
+  <!-- ══════════ SERVICES ══════════ -->
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 36px; margin-top: 30px;">Our Services</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 0;">
+
+      <div style="flex: 0 0 50%; max-width: 50%;">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Custom Module Development</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">We build tailored Odoo modules to fit your exact business needs, from simple customizations to complex workflows.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Integration Services</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">We connect Odoo with your existing tools and third-party systems to keep your operations running smoothly in one place.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex: 0 0 50%; max-width: 50%;">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Odoo Implementation</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">We help you deploy and configure this module within your existing Odoo environment quickly and correctly.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 28px;">
+          <div style="width: 24px; height: 24px; background: #1a2ecc; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #fff; font-size: 14px; line-height: 1;">
+            ✓
+          </div>
+          <div>
+            <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Ongoing Support &amp; Maintenance</h5>
+            <p style="font-size: 13px; color: #666; line-height: 1.6; margin: 0;">Get continued assistance after purchase — bug fixes, updates, and guidance are always available when you need them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section style="background: #1a2ecc; padding: 70px 0; text-align: center; width: 100%;">
+  <div style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+    <h2 style="font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 14px;">Ready to Transform Your Business?</h2>
+    <p style="font-size: 14px; color: #a0b4ff; max-width: 480px; margin: 0 auto 32px; line-height: 1.7;">Get started today and experience the difference our professional Odoo solutions can make. Our team is ready to help you succeed.</p>
+    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+      <a href="mailto:enquiry@sgeede.com" style="border: 2px solid #fff; color: #fff; background: transparent; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+        ✉ Email Us
+      </a>
+      <a href="https://sgeede.com" target="_blank" style="border: 2px solid #fff; color: #fff; background: transparent; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+        🌐 Website
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT BAR ══════════ -->
+<div style="background: #1a2ecc; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.12); text-align: center;">
+  <p style="font-size: 12px; color: rgba(255,255,255,0.55); margin-bottom: 4px;">Have Questions?</p>
+  <a href="https://wa.me/6281371197735" style="font-size: 14px; color: #fff; text-decoration: none; font-weight: 500;">💬 +62 813-7119-7735</a>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<div style="background: #111; padding: 18px 0; text-align: center;">
+  <p style="font-size: 12px; color: #666; margin: 0;">📍 2026 SGEEDE. All Rights Reserved</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</body>
+</html>
