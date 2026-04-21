@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="sgeede_res_config_settings_view" model="ir.ui.view">
+    <field name="name">sgeede.res.config.settings.ai.desc</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//block[@name='integration']" position="after">
+        <block name="AI Settings" title="AI Product Description">
+            <setting>
+                <field name="ai_provider" widget="radio"/>
+            </setting>
+
+            <setting>
+                <field name="ai_default_tone"/>
+            </setting>
+
+            <setting>
+                <field name="ai_default_language"/>
+            </setting>
+
+            <setting invisible="ai_provider != 'groq'">
+                <field name="ai_groq_api_key" password="True"/>
+            </setting>
+
+            <setting invisible="ai_provider != 'gemini'">
+                <field name="ai_gemini_api_key" password="True"/>
+            </setting>
+        </block>
+      </xpath>
+
+    </field>
+  </record>
+</odoo>
