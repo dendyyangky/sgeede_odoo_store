@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="sgeede_product_template_ai_desc" model="ir.ui.view">
+    <field name="name">sgeede.product.template.ai.desc</field>
+    <field name="model">product.template</field>
+    <field name="inherit_id" ref="product.product_template_form_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside">
+          <button name="action_open_ai_wizard" type="object" string="Generate Description with AI" class="oe_highlight" icon="fa-magic" invisible="id == False"/>
+      </xpath>
+    </field>
+  </record>
+</odoo>
