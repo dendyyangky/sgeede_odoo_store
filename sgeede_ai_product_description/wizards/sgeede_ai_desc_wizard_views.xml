@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="sgeede_ai_desc_wizard_form" model="ir.ui.view">
+    <field name="name">sgeede.ai.desc.wizard.form</field>
+    <field name="model">sgeede.ai.desc.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Generate Description with AI">
+        <sheet>
+          <group invisible="state != 'configure'">
+            <group string="Target">
+              <field name="product_id" readonly="1"/>
+              <field name="target_field" widget="radio"/>
+            </group>
+            <group string="Options">
+              <field name="tone"/>
+              <field name="language"/>
+            </group>
+          </group>
+
+          <group invisible="state != 'preview'">
+              <group string="Settings (applied)">
+                <field name="target_field" readonly="1"/>
+                <field name="tone" readonly="1"/>
+                <field name="language" readonly="1"/>
+              </group>
+              <group string="Generated Result">
+                <field name="preview_result" readonly="1" nolabel="1" colspan="2"/>
+              </group>
+          </group>
+          
+          <field name="state" invisible="1"/>
+
+        </sheet>
+
+        <footer>
+          <button
+            string="Generate"
+            name="action_generate"
+            type="object"
+            class="btn-primary"
+            invisible="state != 'configure'"
+          />
+          <button
+            string="Use this"
+            name="action_apply"
+            type="object"
+            class="btn-primary"
+            invisible="state != 'preview'"
+          />
+          <button
+            string="Regenerate"
+            name="action_regenerate"
+            type="object"
+            class="btn-secondary"
+            invisible="state != 'preview'"
+          />
+          <button
+            string="Discard"
+            name="action_discard"
+            type="object"
+            class="btn-secondary"
+            invisible="state != 'configure'"
+          />
+          <button
+            string="Cancel"
+            class="btn-secondary"
+            special="cancel"
+            invisible="state != 'preview'"
+          />
+        </footer>
+
+      </form>
+    </field>
+  </record>
+</odoo>
