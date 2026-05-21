@@ -1,0 +1,94 @@
+.o_company_announcement_container {
+    position: fixed;
+    bottom: 24px;       // ← pindah ke bawah
+    right: 24px;
+    top: unset;
+    left: unset;
+    transform: unset;
+    width: 360px;
+    z-index: 1050;
+}
+
+.o_company_announcement_banner {
+    align-items: flex-start;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 12px 14px;
+}
+
+.o_company_announcement_content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.o_company_announcement_title {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.o_company_announcement_message {
+    overflow-wrap: anywhere;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.o_company_announcement_close {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    color: inherit;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: 26px;
+    justify-content: center;
+    opacity: 0.7;
+    width: 26px;
+
+    &:hover,
+    &:focus {
+        background: rgba(0, 0, 0, 0.08);
+        opacity: 1;
+    }
+}
+
+.o_company_announcement_info {
+    background: #eaf4ff;
+    border-color: #a9d4ff;
+    color: #173b57;
+}
+
+.o_company_announcement_success {
+    background: #eaf7ee;
+    border-color: #adddbd;
+    color: #1f4f2f;
+}
+
+.o_company_announcement_warning {
+    background: #fff6dc;
+    border-color: #f1d37a;
+    color: #62470b;
+}
+
+.o_company_announcement_danger {
+    background: #fdecec;
+    border-color: #efb0b0;
+    color: #651f1f;
+}
+
+@media (max-width: 575px) {
+    .o_company_announcement_container {
+        max-width: calc(100vw - 16px);
+        top: 50px;
+    }
+
+    .o_company_announcement_banner {
+        padding: 10px 12px;
+    }
+}
