@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sgeede_company_announcement.AnnouncementBanner">
+        <div t-if="state.showInHomeMenu and state.announcements.length" class="o_company_announcement_container">
+            <div t-foreach="state.announcements" t-as="announcement" t-key="announcement.id"
+                t-att-class="'o_company_announcement_banner o_company_announcement_' + announcement.level">
+                <div class="o_company_announcement_content">
+                    <strong class="o_company_announcement_title" t-esc="announcement.title"/>
+                    <div class="o_company_announcement_message" t-out="announcement.message"/>
+                </div>
+                <button class="o_company_announcement_close"
+                    type="button"
+                    title="Dismiss"
+                    aria-label="Dismiss"
+                    t-on-click="() => this.dismiss(announcement)">
+                    <i class="fa fa-times"/>
+                </button>
+            </div>
+        </div>
+    </t>
+</templates>
